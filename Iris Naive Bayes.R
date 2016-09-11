@@ -59,6 +59,26 @@ library(e1071)
 model = train(IrisTrain[,-5],IrisTrain$Species,'nb',trControl=trainControl(method='cv',number=10))
 
 model
+#Naive Bayes 
+
+#90 samples
+# 4 predictor
+# 3 classes: 'Iris-setosa', 'Iris-versicolor', 'Iris-virginica' 
+
+#No pre-processing
+#Resampling: Cross-Validated (10 fold) 
+#Summary of sample sizes: 81, 81, 81, 81, 81, 81, ... 
+#Resampling results across tuning parameters:
+
+#  usekernel  Accuracy   Kappa
+#  FALSE      0.9666667  0.95 
+#   TRUE      0.9666667  0.95 
+
+#Tuning parameter 'fL' was held constant at a value of 0
+#Tuning parameter 'adjust' was held
+# constant at a value of 1
+#Accuracy was used to select the optimal model using  the largest value.
+#The final values used for the model were fL = 0, usekernel = FALSE and adjust = 1. 
 
 #Prediction function
 predict(model$finalModel,IrisTest[,-5])
