@@ -1,6 +1,6 @@
 
 # Problem Statement:
-# Classify the species based on the flower characteristics
+# Classify the species based on the flower attributes
 
 # Read in the data
 IrisData = read.table(file.choose(),header=FALSE, sep=",")
