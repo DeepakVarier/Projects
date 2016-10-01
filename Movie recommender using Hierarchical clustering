@@ -6,7 +6,10 @@
 movies = read.table(file.choose(), header=FALSE, sep="|",quote="\"")
 
 # Look at the structure of the data
+head(movies)
 str(movies)
+summary(movies)
+describe(movies)
 
 # Add column names as shown in Movielens website
 colnames(movies) = c("ID", "Title", "ReleaseDate", "VideoReleaseDate", "IMDB", "Unknown", "Action", "Adventure", "Animation", "Childrens", "Comedy", "Crime", "Documentary", "Drama", "Fantasy", "FilmNoir", "Horror", "Musical", "Mystery", "Romance", "SciFi", "Thriller", "War", "Western")
